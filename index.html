@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function off() {
+        document.getElementById("img").src = "off.png";
+        document.getElementById("off").style.display = "none";
+        document.getElementById("on").style.display = "block";
+      }
+
+      function on() {
+        document.getElementById("img").src = "on.png";
+        document.getElementById("on").style.display = "none";
+        document.getElementById("off").style.display = "block";
+      }
+    </script>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        background-color: #fff;
+        padding: 0;
+        margin: 0;
+      }
+      img {
+        height: 90vh;
+        width: auto;
+      }
+      button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        background-color: #4caf50;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 10px;
+        transition: background-color 0.3s;
+      }
+    </style>
+  </head>
+
+  <body onload="off()">
+    <img id="img" alt="Light Image" />
+    <div>
+      <button onclick="on()" id="on">Light On</button>
+      <button onclick="off()" id="off">Light Off</button>
+    </div>
+  </body>
+</html>
